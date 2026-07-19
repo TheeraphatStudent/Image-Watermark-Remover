@@ -1,3 +1,7 @@
+<p align = "center">
+	<img width = 512 src="Images/front.jpg" /><br>
+</p>
+
 - An Image Watermark Remover is a desktop application built in Python with a tkinter GUI (image processing by NumPy + Pillow).
 - The user selects any image that has a light, tinted watermark and the watermark is whitened while the dark content is preserved.
 - Both the original and the cleaned image are shown side by side in a live before/after preview.
@@ -60,6 +64,7 @@ pip install -r requirements.txt
   ```
 
   (Or, with a plain Python install: `pip install -r requirements.txt` then `python image_watermark_remover.py`.)
+
 - A single window opens with a toolbar (**Select Image · Save Result · Exit**), two preview panels, and threshold sliders.
 - Click **Select Image…** and pick any image that has a light/tinted watermark.
 - The **Original** and **Cleaned** previews update side by side; a live "% whitened" figure shows how much was removed.
@@ -105,10 +110,10 @@ Key options: `--scale {1,2,4}`, `--svg {none,vector,raster,both}`, `--rasterize-
 ### 📌SCREENSHOTS :
 
 <p align="center">
-  <img width = 512 src="Images/1.jpg" /><br>
-  <img width = 512 src="Images/2.jpg" /><br>
-  <img width = 512 src="Images/3.jpg" /><br>
-  <img width = 512 src="Images/4.jpg" /><br>
+  <img width = 512 src="Images/1.png" /><br>
+  <img width = 512 src="Images/2.png" /><br>
+  <img width = 512 src="Images/3.png" /><br>
+  <img width = 512 src="Images/4.png" /><br>
   <img width = 512 src="Images/5.jpg" /><br>
   <img width = 512 src="Images/6.jpg" /><br>
 </p>
