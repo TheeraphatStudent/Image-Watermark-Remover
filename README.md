@@ -1,8 +1,8 @@
-- An Image Watermark Remover is an application created in python with tkinter gui and OpenCv library.
-- In this application user can select any image with watermark in it and will be able to remove the watermark from that selected image.
-- Also user will be shown both the image with watermark and the image without watermark as an output.
-- User can also save that snipped image any where on local system by using save command.
-- For implementing this used OpenCv library.
+- An Image Watermark Remover is a desktop application built in Python with a tkinter GUI (image processing by NumPy + Pillow).
+- The user selects any image that has a light, tinted watermark and the watermark is whitened while the dark content is preserved.
+- Both the original and the cleaned image are shown side by side in a live before/after preview.
+- Three sliders (Light / Red / Pink-min) let the user tune the removal for their own image; a live "% whitened" readout shows the effect.
+- The cleaned image can be saved anywhere on the local system using the Save button.
 
 <p align = "center">
 	<img src = "https://img.shields.io/github/stars/akash-rajak/Image-Watermark-Remover?style=social", alt = "GitHub Repo stars">
@@ -38,23 +38,33 @@
 
 ### 📌REQUIREMENTS :
 
-- python 3
-- cv2 module
-- tkinter module
-- filedialog from tkinter
-- messagebox
-- from PIL import Image, ImageTk
+- Python 3
+- NumPy
+- Pillow (`from PIL import Image, ImageTk`)
+- tkinter (ships with Python; on Debian/Ubuntu: `sudo apt install python3-tk`)
+
+Install everything with:
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ### 📌HOW TO Use it :
 
-- User just need to download the file, and run the image_watermark_remover.py, on local system.
-- After running a GUI window appears, where user can start the application of removing watermark by clicking on the START button.
-- After that a new GUI window will open, in which user will have buttons like SELECT and EXIT.
-- User can select any image file with watermark in it from the local system, using SELECT button.
-- After that user will be able to see both the image with watermark and image without watermark as an output.
-- User can also save that image without watermark any where on local system by using save command.
+- Run it with [uv](https://docs.astral.sh/uv/) — no manual install needed, the dependencies are declared inline in the script:
+
+  ```bash
+  uv run image_watermark_remover.py
+  ```
+
+  (Or, with a plain Python install: `pip install -r requirements.txt` then `python image_watermark_remover.py`.)
+- A single window opens with a toolbar (**Select Image · Save Result · Exit**), two preview panels, and threshold sliders.
+- Click **Select Image…** and pick any image that has a light/tinted watermark.
+- The **Original** and **Cleaned** previews update side by side; a live "% whitened" figure shows how much was removed.
+- If the defaults miss, drag the **Light / Red / Pink-min** sliders — the cleaned preview refreshes as you go.
+- Click **Save Result…** to write the cleaned image anywhere on your system.
 
 #### Usage without
 
@@ -78,17 +88,17 @@ Key options: `--scale {1,2,4}`, `--svg {none,vector,raster,both}`, `--rasterize-
 
 ---
 
-### Original GUI tool (`image_watermark_remover.py`)
+### GUI tool (`image_watermark_remover.py`)
 
 ### 📌Purpose :
 
-- This scripts helps user to easily remove the water mark present in the image.
+- Provides a point-and-click front end over the same cleaning engine as `remove_watermark.py`, so users can remove a watermark without the command line.
 
 ### 📌Compilation Steps :
 
-- Install tkinter, PIL, cv2
-- After that download the code file, and run image_watermark_remover.py on local system.
-- Then the script will start running and user can explore it by selecting any image with watermark in it and removing it.
+- Run `uv run image_watermark_remover.py` (uv installs NumPy + Pillow automatically; tkinter ships with Python).
+- Or install manually with `pip install -r requirements.txt` and run `python image_watermark_remover.py`.
+- Select an image, tune the sliders if needed, and save the cleaned result.
 
 ---
 
