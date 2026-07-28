@@ -1,5 +1,5 @@
-libraries used : tkinter
-		 from tkinter import filedialog
-		 import tkinter.messagebox
-		 from PIL import ImageTk, Image
-		 cv2
+numpy
+pillow
+lxml
+cairosvg
+vtracer
